@@ -6,6 +6,9 @@ import { motion } from "framer-motion";
 import Intro from "@/components/intro/intro";
 import React from "react";
 import Footer from "@/components/footer/footer";
+import Faq from "@/components/faq-component/page";
+import Mobbing from "@/components/ImMobbing/page";
+
 
 
 export default function Home() {
@@ -37,7 +40,7 @@ export default function Home() {
            }}>
             <div className="absolute -inset-0.5  bg-gradient-to-r from-pink-600 to-purple-600 rounded-lg blur opacity-70 group-hover:opacity-100 group-hover:scale-105  "></div>
             <button 
-              className="relative bg-dark hover:bg-darkb hover:scale-105 text-gray-50 font-medium py-2 px-10 rounded-lg"
+              className="relative bg-dark hover:scale-105 text-gray-50 font-medium py-2 px-10 rounded-lg"
               onClick={() => IntroRef.current?.scrollIntoView({ behavior: 'smooth' })}
             >
               Les mer
@@ -51,7 +54,6 @@ export default function Home() {
           <div className="bg-[#5388bd] absolute -z-9 opacity-50  h-[16.25rem] w-[16.25rem] rounded-full blur-[5rem] sm:w-[25.75rem]"></div>
           </div>
         
-        {/* <div className="bg-[#676394] absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]"></div> */}
       
       </motion.div>
       </div>
@@ -59,7 +61,21 @@ export default function Home() {
       <div ref={IntroRef} className="scroll-mt-32">
         <Intro/>
       </div>
+
+      <motion.div
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+          delay: 0.1,
+       }} className="" id="faq" >
+
+        
+          
+            <div className=""><Faq/></div>
       
+      </motion.div>
+      
+      <div className="mb-28"><Mobbing/></div>
     <Footer/>
     </main>
   );

@@ -3,10 +3,12 @@ import React from 'react';
 const navigation = {
   main: [
     { name: 'Hjem', href: '/' },
+    { name: 'FAQ', href: '/#faq' },
     { name: 'Utvikling', href: '/utvikling' },
-    { name: 'Brukerstøtte', href: 'brukerstotte' },
-    { name: 'Drift', href: 'drift' },
-    { name: 'Dashboard', href: 'dashboard' },
+    { name: 'Brukerstøtte', href: '/brukerstotte' },
+    { name: 'Drift', href: '/drift' },
+    { name: 'Dashboard', href: '/dashboard' },
+
   ],
 };
 

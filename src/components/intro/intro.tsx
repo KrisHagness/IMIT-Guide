@@ -50,9 +50,9 @@ export default function Intro() {
             animate={controls}>
                 <Tabs defaultValue="utvikling" className="w-[400px] m-4 mt-12 justify-center item-center">
                     <div className='relative group'>
-                        <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-600 to-purple-600  rounded-lg blur opacity-70  "></div>
-                        <TabsList className='relative flex'>
-                            <TabsTrigger value="utvikling" className=' py-1 w-[126px] text-md hover:text-gray-50 hover:scale-105'>Utvikling</TabsTrigger>
+                        <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-600 to-purple-600  rounded-lg blur opacity-70 group-hover:scale-[1.04] transition duration-200 "></div>
+                        <TabsList className='relative flex hover:scale-105 transition duration-200'>
+                            <TabsTrigger value="utvikling" className=' py-1 w-[126px] text-md hover:text-gray-50 hover:scale-[1.02]'>Utvikling</TabsTrigger>
                             <TabsTrigger value="brukerstøtte" className='py-1 w-[126px] text-md hover:text-gray-50 hover:scale-105 '>Brukerstøtte</TabsTrigger>
                             <TabsTrigger value="drift" className='py-1 w-[126px] text-md hover:text-gray-50 hover:scale-105'>Drift</TabsTrigger>
                         </TabsList>
@@ -125,7 +125,7 @@ export default function Intro() {
                     </div>
                 </Tabs>   
             </motion.div>
-            <div className='h-screen'></div>
+            <div className='h-[8rem]'></div>
         </div>
 
     </section>

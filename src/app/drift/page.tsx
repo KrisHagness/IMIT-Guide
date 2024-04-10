@@ -6,28 +6,28 @@ import Image from 'next/image'
 import imageUrlBuilder from '@sanity/image-url'
 import Footer from '@/components/footer/footer'
 
-const Utvikling = () => {
-  const [utviklingData, setUtviklingData] = useState(null)
+const Drift = () => {
+  const [driftData, setDriftData] = useState(null)
 
   const builder = imageUrlBuilder(client)
 
   useEffect(() => {
     client
-      .fetch(`*[_type == "utvikling"]`)
-      .then((data) => setUtviklingData(data))
+      .fetch(`*[_type == "drift"]`)
+      .then((data) => setDriftData(data))
       .catch(console.error)
   }, [])
 
-  if (!utviklingData) return <div>Loading...</div>
+  if (!driftData) return <div>Loading...</div>
 
   return (
     <div className='flex bg-dark w-screen flex-col  '>
       <div className="w-screen z-50"> <Navbar/> </div>
   
       <div className='text-gray-50 flex justify-center flex-col mt-24 w-screen text-center px-12'>
-        <h1 className='text-4xl text-gray-50'>Utvikling</h1>
+        <h1 className='text-4xl text-gray-50'>Drift</h1>
         <div className='grid grid-cols-2 gap-4'>
-        {utviklingData.map((item: any, index: number) => (
+        {driftData.map((item: any, index: number) => (
             <div key={index} className='mt-12 flex justify-center flex-col item-center text-center relative mx-6'>
                             <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg blur opacity-70   "></div>
                 
@@ -62,4 +62,4 @@ const Utvikling = () => {
   )
 }
 
-export default Utvikling
+export default Drift

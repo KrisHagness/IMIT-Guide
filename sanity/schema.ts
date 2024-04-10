@@ -37,6 +37,12 @@ export const schema: { types: SchemaTypeDefinition[] } = {
               title: 'Link',
               type: 'url',
             },
+            {
+              name: 'lesMerRef',
+              title: 'Les mer referanse',
+              type: 'string',
+            },
+
           ],
         },
         {
@@ -71,6 +77,11 @@ export const schema: { types: SchemaTypeDefinition[] } = {
               name: 'link',
               title: 'Link',
               type: 'url',
+            },
+            {
+              name: 'lesMerRef',
+              title: 'Les mer referanse',
+              type: 'string',
             },
           ],
         },
@@ -109,7 +120,32 @@ export const schema: { types: SchemaTypeDefinition[] } = {
               title: 'Link',
               type: 'url',
             },
+            {
+              name: 'lesMerRef',
+              title: 'Les mer referanse',
+              type: 'string',
+            },
+            
           ],
         },
+        {
+          name: 'mobbing',
+          title: 'Mobbe Liste',
+          type: 'document',
+          fields: [
+            {
+              name: 'title',
+              title: 'Title',
+              type: 'string',
+            },
+            {
+              name: 'link',
+              title: 'Link',
+              type: 'url',
+            },
+
+          ],
+        },
+        
   ],
 }
