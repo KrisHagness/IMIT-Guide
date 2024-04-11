@@ -21,7 +21,7 @@ export default function Home() {
       <div ref={HjemRef} id="Hjem" className="flex h-screen -w-screen flex-col items-center bg-dark dark text-gray-50" >
       <div className="w-screen z-50"> <Navbar/> </div>
 
-      <motion.div className="flex flex-row items-center w-screen h-screen"
+      <motion.div className="flex flex-col-reverse mt-28 sm:mt-0 sm:flex-row items-center w-screen h-screen"
                 initial={{ opacity: 0, scale: 0}}
                 animate={{ opacity: 1, scale: 1}}
                 transition={{
@@ -49,7 +49,7 @@ export default function Home() {
           </div>
           
 
-          <div className="flex relative w-1/2 justify-center">
+          <div className="flex relative w-1/2 justify-center mb-24 sm:mb-0">
           <Image src="/userGuideNo.png" width={400} height={400} alt="User guide bilde, kilde: Freepik - Vectorjuice" className="flex z-10"/>
           <div className="bg-[#5388bd] absolute -z-9 opacity-50  h-[16.25rem] w-[16.25rem] rounded-full blur-[5rem] sm:w-[25.75rem]"></div>
           </div>

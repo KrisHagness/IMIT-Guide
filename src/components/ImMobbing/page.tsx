@@ -13,7 +13,7 @@ const Mobbing = () => {
         .catch(console.error)
     }, [])
   
-    if (!mobbingData) return <div>Loading...</div>
+    if (!mobbingData) return <div><span className="loading loading-dots loading-md"></span></div>
   
 
   return (

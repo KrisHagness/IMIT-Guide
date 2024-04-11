@@ -10,7 +10,7 @@ import {
 
 export default function FaqComponent() {
   return (
-    <div className='w-screen h-[30rem] flex flex-col item-center'>
+    <div className='w-screen mb-20 flex flex-col item-center'>
 
     <div className='flex justify-center items-center flex-col px-28 '>
         <div className=' text-center'>
