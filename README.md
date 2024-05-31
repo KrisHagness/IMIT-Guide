@@ -1,6 +1,6 @@
 # IMIT Guide
 
-Nettsiden er bygget med React, Next.js, Tailwind CSS, TypeScript, Framer Motion og Sanity. Det fungerer som en guide som tilbyr informasjon, tips og veiledninger Informasjonsteknologi og Medieproduksjon på Elvebakken VGS.
+Nettsiden er bygget med React, Next.js, Tailwind CSS, TypeScript, Framer Motion, og Sanity. Det fungerer som en guide som tilbyr informasjon, tips og veiledninger for Informasjonsteknologi og Medieproduksjon på Elvebakken VGS.
 
 ## Teknologier brukt
 
@@ -13,7 +13,7 @@ Nettsiden er bygget med React, Next.js, Tailwind CSS, TypeScript, Framer Motion 
 
 ## Formål
 
-Nettstedet er designet for å gi nyttig informasjon, tips og veiledninger elever.
+Nettstedet er designet for å gi nyttig informasjon, tips og veiledninger elever, slik at elever får en god overskt over de ulike fagene i IT-faget, samt ulike verktøy og teknologier.
 
 ## Kontakt
 
