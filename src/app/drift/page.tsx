@@ -21,7 +21,7 @@ const Drift = () => {
   if (!driftData) return <div className="animate-spin rounded-full h-7 w-7 border-b-2 border-white/50 mx-auto my-2"></div>
 
   return (
-    <div className='flex bg-dark w-screen flex-col  '>
+    <div className='flex bg-dark w-screen flex-col min-h-screen  '>
       <div className="w-screen z-50"> <Navbar/> </div>
   
       <div className='text-gray-50 flex justify-center flex-col mt-24 w-screen text-center px-12'>

@@ -1,6 +1,6 @@
 # IMIT Guide
 
-Denne nettsiden er bygget med React, Next.js, Tailwind CSS, TypeScript, Framer Motion og Sanity. Det fungerer som en guide som tilbyr informasjon, tips og veiledninger om IT faget på Informasjonsteknologi og medieproduksjon på Elvebakken VGS:.
+Nettsiden er bygget med React, Next.js, Tailwind CSS, TypeScript, Framer Motion, og Sanity. Det fungerer som en guide som tilbyr informasjon, tips og veiledninger for Informasjonsteknologi og Medieproduksjon på Elvebakken VGS.
 
 ## Teknologier brukt
 
@@ -13,8 +13,10 @@ Denne nettsiden er bygget med React, Next.js, Tailwind CSS, TypeScript, Framer M
 
 ## Formål
 
-Nettstedet er designet for å være en guide med nyttig informasjon, tips og veiledninger for IT faget.
+Nettstedet er designet for å gi nyttig informasjon, tips og veiledninger elever, slik at elever får en god overskt over de ulike fagene i IT-faget, samt ulike verktøy og teknologier.
 
 ## Kontakt
 
 For spørsmål eller forespørsler, kontakt [kris@khagness.com](mailto:kris@khagness.com).
+
+
