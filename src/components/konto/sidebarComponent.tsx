@@ -37,7 +37,7 @@ export default function Sidebar() {
     useKindeBrowserClient();
   const { permissions } = getPermissions();
   const ref = useRef<HTMLElement | null>(null);
-//   useOnClickOutside(ref, () => setIsOpen(false));
+
 
 const container = {
     hidden: { opacity: 1, scale: 0 },
