@@ -42,9 +42,9 @@ export default function FaqComponent() {
                     </AccordionItem>
 
                     <AccordionItem value="item-4">
-                        <AccordionTrigger>Hva er Mathais mobbeliste</AccordionTrigger>
+                        <AccordionTrigger>Hvilke teknologier er brukt for å lage nettsiden?</AccordionTrigger>
                         <AccordionContent>
-                        Dette er en liste over de beste ordene for å mobbe IM elever, laget av Mathias
+                        Nettsiden er bygget med React, Next.js, Tailwind CSS, TypeScript, Framer Motion, og Sanity. Les mer om teknologiene på Github.
                         </AccordionContent>
                     </AccordionItem>
 

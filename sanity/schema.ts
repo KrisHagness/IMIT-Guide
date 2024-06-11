@@ -11,22 +11,22 @@ export const schema: { types: SchemaTypeDefinition[] } = {
           fields: [
             {
               name: 'title',
-              title: 'Title',
+              title: 'Tittel',
               type: 'string',
             },
             {
               name: 'description',
-              title: 'Description',
+              title: 'Beskrivelse',
               type: 'string',
             },
             {
               name: 'content',
-              title: 'Content',
+              title: 'Innhold',
               type: 'text',
             },
             {
               name: 'image',
-              title: 'Image',
+              title: 'Bilde',
               type: 'image',
               options: {
                 hotspot: true,
@@ -52,22 +52,22 @@ export const schema: { types: SchemaTypeDefinition[] } = {
           fields: [
             {
               name: 'title',
-              title: 'Title',
+              title: 'Tittel',
               type: 'string',
             },
             {
               name: 'description',
-              title: 'Description',
+              title: 'Beskrivelse',
               type: 'string',
             },
             {
               name: 'content',
-              title: 'Content',
+              title: 'Innhold',
               type: 'text',
             },
             {
               name: 'image',
-              title: 'Image',
+              title: 'Bilde',
               type: 'image',
               options: {
                 hotspot: true,
@@ -92,22 +92,22 @@ export const schema: { types: SchemaTypeDefinition[] } = {
           fields: [
             {
               name: 'title',
-              title: 'Title',
+              title: 'Tittel',
               type: 'string',
             },
             {
               name: 'description',
-              title: 'Description',
+              title: 'Beskrivelse',
               type: 'string',
             },
             {
               name: 'content',
-              title: 'Content',
+              title: 'Innhold',
               type: 'text',
             },
             {
               name: 'image',
-              title: 'Image',
+              title: 'Bilde',
               type: 'image',
               options: {
                 hotspot: true,
@@ -128,24 +128,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
             
           ],
         },
-        {
-          name: 'mobbing',
-          title: 'Mobbe Liste',
-          type: 'document',
-          fields: [
-            {
-              name: 'title',
-              title: 'Title',
-              type: 'string',
-            },
-            {
-              name: 'link',
-              title: 'Link',
-              type: 'url',
-            },
-
-          ],
-        },
+        
         
   ],
 }

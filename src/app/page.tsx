@@ -7,13 +7,14 @@ import Intro from "@/components/intro/intro";
 import React from "react";
 import Footer from "@/components/footer/footer";
 import Faq from "@/components/faq-component/page";
-import Mobbing from "@/components/ImMobbing/page";
-
+import FaqComponent from "@/components/faq-component/page";
 
 
 export default function Home() {
   const IntroRef = React.useRef(null);
   const HjemRef = React.useRef(null);
+  const FaqRef = React.useRef(null);
+
 
 
   return (
@@ -21,7 +22,7 @@ export default function Home() {
       <div ref={HjemRef} id="Hjem" className="flex h-screen -w-screen flex-col items-center bg-dark dark text-gray-50" >
       <div className="w-screen z-50"> <Navbar/> </div>
 
-      <motion.div className="flex flex-row items-center w-screen h-screen"
+      <motion.div className="flex mt-[5rem] sm:mt-0 flex-col sm:flex-row items-center w-screen h-screen"
                 initial={{ opacity: 0, scale: 0}}
                 animate={{ opacity: 1, scale: 1}}
                 transition={{
@@ -29,10 +30,15 @@ export default function Home() {
                     duration: 0.2,
                 }}
                 >
-        <div className="flex flex-col items-center  w-1/2">
+                <div className="flex sm:hidden relative w-3/5 mt-[2rem] justify-center">
+                  <Image src="/userGuideNo.png" width={400} height={400} alt="User guide bilde, kilde: Freepik - Vectorjuice" className="flex z-10"/>
+                  <div className="bg-[#5388bd] absolute -z-9 opacity-50  h-[16.25rem] w-[16.25rem] rounded-full blur-[5rem] sm:w-[25.75rem]"></div>
+                </div>
+
+        <div className="flex flex-col items-center w-3/4  sm:w-1/2 mt-[6rem] sm:mt-0">
           <h1 className="text-6xl font-bold font-serif">IMIT Guide</h1>
-          <h2 className="text-xl mt-4">Informasjon, tips og veiledning til IT faget.</h2>
-          <motion.div className="relative mt-8 group  "
+          <h2 className="text-xl mt-6 sm:mt-4 text-center sm:text-start ">Informasjon, tips og veiledning til IT faget.</h2>
+          <motion.div className="relative mt-10 group "
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
@@ -49,7 +55,7 @@ export default function Home() {
           </div>
           
 
-          <div className="flex relative w-1/2 justify-center">
+          <div className="hidden sm:flex relative w-3/5 mt-[7rem] sm:w-1/2 justify-center">
           <Image src="/userGuideNo.png" width={400} height={400} alt="User guide bilde, kilde: Freepik - Vectorjuice" className="flex z-10"/>
           <div className="bg-[#5388bd] absolute -z-9 opacity-50  h-[16.25rem] w-[16.25rem] rounded-full blur-[5rem] sm:w-[25.75rem]"></div>
           </div>
@@ -58,7 +64,7 @@ export default function Home() {
       </motion.div>
       </div>
 
-      <div ref={IntroRef} className="scroll-mt-32">
+      <div ref={IntroRef} className="scroll-mt-32 mx-4 sm:mx-0">
         <Intro/>
       </div>
 
@@ -67,15 +73,12 @@ export default function Home() {
       animate={{ opacity: 1, y: 0 }}
       transition={{
           delay: 0.1,
-       }} className="" id="faq" >
-
-        
+       }} className="" id="faq" ref={FaqRef} >
           
-            <div className=""><Faq/></div>
+            <div className=""><FaqComponent/></div>
       
       </motion.div>
       
-      <div className="mb-28"><Mobbing/></div>
     <Footer/>
     </main>
   );

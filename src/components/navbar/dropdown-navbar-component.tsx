@@ -65,9 +65,9 @@ const NavigationMenuDemo: React.FC = () => (
   <NavigationMenu>
     <NavigationMenuList>
       <NavigationMenuItem>
-        <NavigationMenuTrigger><p className='text-gray-300 hover:text-gray-50 mr-1 text-lg font-medium '>Guides</p> </NavigationMenuTrigger>
+        <NavigationMenuTrigger><p className='text-gray-300 hover:text-gray-50 mr-1 text-lg font-medium'>Guides</p> </NavigationMenuTrigger>
         <NavigationMenuContent>
-          <ul className="grid w-[200px] gap-3 p-4 md:w-[300px] md:grid-cols-1 lg:w-[350px]">
+          <ul className="grid w-[240px] gap-3 p-4 md:w-[300px] md:grid-cols-1 lg:w-[350px] ">
             {components.map((component) => (
               <ListItem
                 key={component.title}

@@ -18,7 +18,7 @@ const Utvikling = () => {
       .catch(console.error)
   }, [])
 
-  if (!utviklingData) return <div>Loading...</div>
+  if (!utviklingData) return <div className="animate-spin rounded-full h-7 w-7 border-b-2 border-white/50 mx-auto my-2"></div>
 
   return (
     <div className='flex bg-dark w-screen flex-col  '>
@@ -26,13 +26,13 @@ const Utvikling = () => {
   
       <div className='text-gray-50 flex justify-center flex-col mt-24 w-screen text-center px-12'>
         <h1 className='text-4xl text-gray-50'>Utvikling</h1>
-        <div className='grid grid-cols-2 gap-4'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 gap-4 '>
         {utviklingData.map((item: any, index: number) => (
             <div key={index} className='mt-12 flex justify-center flex-col item-center text-center relative mx-6'>
                             <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg blur opacity-70   "></div>
                 
                 
-                <div className='relative bg-dark rounded-xl flext justify-center items-center h-[24rem]'>
+                <div className='relative bg-dark rounded-xl flext justify-center items-center h-[28rem] sm:h-[24rem]'>
                     {item.image && (
                     <div className='flex justify-center'>
                         <Image src={builder.image(item.image).url()} alt={item.title} width={128} height={128} className=' object-cover h-[8rem] mt-8' />

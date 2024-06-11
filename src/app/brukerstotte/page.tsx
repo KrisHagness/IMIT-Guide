@@ -6,33 +6,33 @@ import Image from 'next/image'
 import imageUrlBuilder from '@sanity/image-url'
 import Footer from '@/components/footer/footer'
 
-const Drift = () => {
-  const [driftData, setDriftData] = useState(null)
+const Brukerstotte = () => {
+  const [BrukerstotteData, setBrukerstotteData] = useState(null)
 
   const builder = imageUrlBuilder(client)
 
   useEffect(() => {
     client
-      .fetch(`*[_type == "drift"]`)
-      .then((data) => setDriftData(data))
+      .fetch(`*[_type == "Brukerstotte"]`)
+      .then((data) => setBrukerstotteData(data))
       .catch(console.error)
   }, [])
 
-  if (!driftData) return <div className="animate-spin rounded-full h-7 w-7 border-b-2 border-white/50 mx-auto my-2"></div>
+  if (!BrukerstotteData) return <div className="animate-spin rounded-full h-7 w-7 border-b-2 border-white/50 mx-auto my-2"></div>
 
   return (
     <div className='flex bg-dark w-screen flex-col  '>
       <div className="w-screen z-50"> <Navbar/> </div>
   
       <div className='text-gray-50 flex justify-center flex-col mt-24 w-screen text-center px-12'>
-        <h1 className='text-4xl text-gray-50'>Drift</h1>
-        <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
-        {driftData.map((item: any, index: number) => (
+        <h1 className='text-4xl text-gray-50'>Brukerstøtte</h1>
+        <div className='grid grid-cols-2 gap-4'>
+        {BrukerstotteData.map((item: any, index: number) => (
             <div key={index} className='mt-12 flex justify-center flex-col item-center text-center relative mx-6'>
                             <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg blur opacity-70   "></div>
                 
                 
-                <div className='relative bg-dark rounded-xl flext justify-center items-center h-[28rem] sm:h-[24rem]'>
+                <div className='relative bg-dark rounded-xl flext justify-center items-center h-[24rem]'>
                     {item.image && (
                     <div className='flex justify-center'>
                         <Image src={builder.image(item.image).url()} alt={item.title} width={128} height={128} className=' object-cover h-[8rem] mt-8' />
@@ -62,4 +62,4 @@ const Drift = () => {
   )
 }
 
-export default Drift
+export default Brukerstotte

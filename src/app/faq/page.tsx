@@ -2,7 +2,7 @@
 import React from 'react'
 import Navbar from '@/components/navbar/main-navbar'
 import Footer from "@/components/footer/footer";
-import FaqComponent from '@/components/faq-component/page'
+import FaqComponent from '@/components/faq-component/faqcomponent'
   
 
 export default function FaqPage() {
