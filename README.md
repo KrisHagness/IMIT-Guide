@@ -18,3 +18,5 @@ Nettstedet er designet for å gi nyttig informasjon, tips og veiledninger elever
 ## Kontakt
 
 For spørsmål eller forespørsler, kontakt [kris@khagness.com](mailto:kris@khagness.com).
+
+
