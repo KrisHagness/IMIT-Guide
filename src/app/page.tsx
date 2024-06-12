@@ -6,8 +6,8 @@ import { motion } from "framer-motion";
 import Intro from "@/components/intro/intro";
 import React from "react";
 import Footer from "@/components/footer/footer";
-import Faq from "@/components/faq-component/page";
-import FaqComponent from "@/components/faq-component/page";
+
+import FaqComponent from "@/components/faq-component/faqcomponent";
 
 
 export default function Home() {
@@ -44,7 +44,8 @@ export default function Home() {
           transition={{
               delay: 0.1,
            }}>
-            <div className="absolute -inset-0.5  bg-gradient-to-r from-pink-600 to-purple-600 rounded-lg blur opacity-70 group-hover:opacity-100 group-hover:scale-105  "></div>
+            <div className="absolute -inset-0.5  bg-gradient-to-r from-pink-600 to-purple-600 rounded-lg blur opacity-70 
+            group-hover:opacity-100 group-hover:scale-105  "></div>
             <button 
               className="relative bg-dark hover:scale-105 text-gray-50 font-medium py-2 px-10 rounded-lg"
               onClick={() => IntroRef.current?.scrollIntoView({ behavior: 'smooth' })}

@@ -4,6 +4,8 @@ import { redirect } from 'next/navigation';
 import {LogoutLink} from "@kinde-oss/kinde-auth-nextjs/components";
 import SidebarComponent from '@/components/konto/sidebarComponent';
 import Navbar from '@/components/navbar/main-navbar';
+import KontoInnhold from '@/components/konto/kontoInnhold';
+
 
 
 
@@ -25,11 +27,15 @@ export default async function Konto() {
             <div className=' hidden lg:flex h-full'><SidebarComponent/></div>
 
           <div className='Content flex bg-dark w-full'>
-            <div className='flex w-full'>
-            <h1 className="text-lg font-serif text-gray-50 text-center w-full">Konto</h1>
+            {/* <div className='flex w-full'>
+            <h1 className="text-xl font-serif text-gray-50 text-center w-full mt-10">IMIT Konto</h1>
+            <h2 className='text-gray-50'>Velkommen til din IMIT konto, her kan du spørre om hjelp og få svar på spørsmålene dine.</h2>
+            <h3 className=''>Hvis du er administrator, vil du ha tilgang til dashboardet, hvor du kan legge til diverse informasjon.</h3>
 
 
-            </div>
+            </div> */}
+            <KontoInnhold/>
+            
           </div>
         </div>
       </div>

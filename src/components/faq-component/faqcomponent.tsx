@@ -44,9 +44,9 @@ const FAQ = () => {
                                     {item.link && (
                                         <div className='flex w-full justify-center items-center'> 
                                             <div className="relative mt-8">
-                                                    <div className="absolute -inset-0.5  bg-gradient-to-r from-pink-600 to-purple-600 rounded-lg blur opacity-70  "></div>
+                                                    <div className="absolute -inset-0.5  bg-gradient-to-r from-pink-600 to-purple-600 rounded-lg blur opacity-70   "></div>
                                                     <button 
-                                                    className="relative bg-dark hover:scale-[1.02] hover:bg-darkb text-gray-50 font-medium py-2 px-10 rounded-lg"
+                                                    className="relative bg-dark hover:scale-[1.02] hover:bg-darkb text-gray-50 font-medium py-2 px-[2.5rem] rounded-lg"
                                                     onClick={() => window.location.href = item.link}>
                                                     Les mer
                                                     </button>

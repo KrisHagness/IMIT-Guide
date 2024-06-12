@@ -128,6 +128,29 @@ export const schema: { types: SchemaTypeDefinition[] } = {
             
           ],
         },
+        {
+          name: 'faq',
+          title: 'FAQ / Ofte stilte spørsmål',
+          type: 'document',
+          fields: [
+            {
+              name: 'title',
+              title: 'Tittel',
+              type: 'string',
+            },
+            {
+              name: 'content',
+              title: 'Innhold',
+              type: 'text',
+            },
+            {
+              name: 'link',
+              title: 'Eventuelle lenker',
+              type: 'url',
+            },
+
+          ],
+        },
         
         
   ],

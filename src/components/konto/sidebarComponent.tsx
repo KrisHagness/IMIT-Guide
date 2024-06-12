@@ -10,7 +10,7 @@ import { usePathname } from "next/navigation";
 import { FaHome, FaBars } from "react-icons/fa";
 import { FiLogOut } from "react-icons/fi";
 import { MdAdminPanelSettings } from "react-icons/md";
-import { FaHouseChimney, FaTicket, FaNewspaper, FaCircleInfo, FaHeadset, FaCircleQuestion, FaFilePen, FaUser, FaRegPenToSquare, FaPenToSquare, FaQuestion } from "react-icons/fa6";
+import {  FaHeadset, FaQuestion } from "react-icons/fa6";
 import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
@@ -61,12 +61,8 @@ const container = {
 
 
   return (
-    <motion.div
-    variants={container} initial="hidden" animate="visible">
-
-        <aside
-        ref={ref}
-        className='h-full min-w-[300px] bg-zinc-900 text-white/50  transform transition-transform duration-200'>
+    <motion.div variants={container} initial="hidden" animate="visible">
+        <aside ref={ref} className='h-full min-w-[300px] bg-zinc-900 text-white/50  transform transition-transform duration-200'>
       <ul className="PC hidden h-full md:flex  text-center  flex-col py-5 gap-2 ">
         {mainRoutes.map(({ path, name, icon, requiredPermissions }) => {
           if (
@@ -76,40 +72,30 @@ const container = {
             return (
               <motion.div key={path} className="flex justify-center items-center"
               variants={item}>
-                <Link
-                
-                className={`py-3 px-5 text-center flex justify-start items-center pr-6 text-lg
+                <Link className={`py-3 px-5 text-center flex justify-start items-center pr-6 text-lg
                    hover:bg-gray-800 rounded-md w-[90%]
-                  hover:scale-105 transition duration-200`}
-                  href={path}
-                >
+                  hover:scale-105 transition duration-200`} href={path}>
                     <div className="flex justify-start text-center items-center ">
                         <div className="mx-1">{icon}</div>
                         <div>{name}</div>
                     </div>
-                  
                 </Link>
               </motion.div>
             );
-          }
-        })}
+          }})}
 
         <motion.div className="mt-auto"
         variants={item}>
           {
             isLoading && !(pathname === "/") && (
               <div className="animate-spin rounded-full h-7 w-7 border-b-2 border-white/50 mx-auto my-2"></div>
-            )
-          }
+            )}
 
           {user?.picture && (
             <Image
-              src={user?.picture}
-              alt="Profile picture"
-              width={50}
-              height={50}
-              className="rounded-full mx-auto my-2"
-            />
+              src={user?.picture} alt="Profil bilde"
+              width={50} height={50}
+              className="rounded-full mx-auto my-2"/>
           )}
 
           {user && !user.picture && (
@@ -117,15 +103,16 @@ const container = {
               {user?.given_name?.[0]}
             </div>
           )}
+
           {user?.given_name && user?.family_name ? (
-  <p className="text-center text-xs mb-1">
-    Logget inn som: {user?.given_name} {user?.family_name}
-  </p>
-) :  (
-  <p className="text-center text-xs mb-1">
-    Logget inn som: 
-  </p>
-)}
+            <p className="text-center text-xs mb-1">
+              Logget inn som: {user?.given_name} {user?.family_name}
+            </p>
+          ) :  (
+            <p className="text-center text-xs mb-1">
+              Logget inn som: 
+            </p>
+          )}
 
           {user?.email && (
             <p className="text-center text-xs mb-3 ">
@@ -136,22 +123,13 @@ const container = {
             <div className="flex justify-center items-center text-center">
             {isAuthenticated && (
                 <LogoutLink
-                className={`py-3 px-5 text-center  hover:bg-gray-800 rounded-md w-[90%] transition flex justify-center items-center`}
-                >
-                <FiLogOut className="mx-1"/>
-
-                Logg ut
+                className={`py-3 px-5 text-center  hover:bg-gray-800 rounded-md w-[90%] transition flex justify-center items-center`}>
+                <FiLogOut className="mx-1"/>Logg ut
                 </LogoutLink>
             )}
             </div>
-
-
         </motion.div>
       </ul>
-
-
-    
-
     </aside>
     </motion.div>
     
