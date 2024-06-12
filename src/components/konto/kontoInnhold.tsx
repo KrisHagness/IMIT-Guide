@@ -3,7 +3,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import  {useKindeBrowserClient} from "@kinde-oss/kinde-auth-nextjs";
 
-export default function kontoInnhold() {
+export default function KontoInnhold() {
     const { user, isLoading, getPermissions } =
     useKindeBrowserClient();
   const { permissions } = getPermissions();
